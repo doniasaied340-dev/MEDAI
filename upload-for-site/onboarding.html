@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MedAI — הזנת תרופה ראשונה</title>
+<meta name="description" content="MedAI — אשף הזנת תרופה ראשונה: פרטי תרופה, זמנים ומינון, סקירה ואישור" />
+<link rel="icon" type="image/png" href="assets/images/logo-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="screen">
+
+  <div class="status-bar" aria-hidden="true">
+    <span class="status-bar__time">9:41</span>
+    <span class="status-bar__icons">••••  📶  🔋</span>
+  </div>
+
+  <header class="logo-header">
+    <img src="assets/images/logo-header.png" alt="MedAI" />
+  </header>
+
+  <header class="page-header page-header--onboarding">
+    <a class="page-header__icon-btn" href="index.html" aria-label="חזרה למסך הקודם">
+      <img src="assets/icons/icon-back.png" alt="" />
+    </a>
+    <div class="page-header__title-group">
+      <p class="page-header__title">הזנת תרופה ראשונה</p>
+    </div>
+  </header>
+
+  <ol class="stepper" aria-label="שלבי הזנת תרופה">
+    <li class="stepper__step stepper__step--active">
+      <span class="stepper__circle" aria-current="step">1</span>
+      <span class="stepper__label">פרטי תרופה</span>
+    </li>
+    <li class="stepper__connector" aria-hidden="true"></li>
+    <li class="stepper__step">
+      <span class="stepper__circle">2</span>
+      <span class="stepper__label">זמנים ומינון</span>
+    </li>
+    <li class="stepper__connector" aria-hidden="true"></li>
+    <li class="stepper__step">
+      <span class="stepper__circle">3</span>
+      <span class="stepper__label">סקירה ואישור</span>
+    </li>
+  </ol>
+
+  <form class="form" action="#" onsubmit="return false;">
+
+    <div class="field">
+      <label class="field__label" for="drug-name">שם התרופה</label>
+      <div class="field__input-wrap">
+        <input class="field__input" type="text" id="drug-name" name="drug-name" value="ליסינופריל" />
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="field__label" for="dosage">מינון</label>
+      <div class="field__input-wrap">
+        <input class="field__input" type="text" id="dosage" name="dosage" value="10 מ״ג" />
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="field__label" for="dose-time">שעת נטילה</label>
+      <div class="field__input-wrap">
+        <input class="field__input field__input--with-icon" type="text" id="dose-time" name="dose-time" value="10:00" inputmode="numeric" />
+        <span class="field__input-icon" aria-hidden="true"><img src="assets/icons/icon-clock.png" alt="" /></span>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="field__label">תנאי נטילה</span>
+      <div class="chip-row" role="radiogroup" aria-label="תנאי נטילה">
+        <button type="button" class="chip" role="radio" aria-pressed="false" aria-checked="false" data-chip="before">
+          <img src="assets/icons/icon-before.png" alt="" />
+          לפני אוכל
+        </button>
+        <button type="button" class="chip" role="radio" aria-pressed="true" aria-checked="true" data-chip="after">
+          <img src="assets/icons/icon-after.png" alt="" />
+          אחרי אוכל
+        </button>
+        <button type="button" class="chip" role="radio" aria-pressed="false" aria-checked="false" data-chip="with">
+          <img src="assets/icons/icon-with.png" alt="" />
+          עם אוכל
+        </button>
+      </div>
+    </div>
+
+  </form>
+
+  <div class="btn-footer">
+    <button type="submit" form="" class="btn btn--primary" id="continue-btn">
+      המשך
+    </button>
+  </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

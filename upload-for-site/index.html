@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MedAI — התרופה הבאה עכשיו</title>
+<meta name="description" content="MedAI — לוח הבית: התרופה הבאה, תזכורות ותרופות היום" />
+<link rel="icon" type="image/png" href="assets/images/logo-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="screen screen--tinted">
+
+  <div class="status-bar" aria-hidden="true">
+    <span class="status-bar__time">9:41</span>
+    <span class="status-bar__icons">••••  📶  🔋</span>
+  </div>
+
+  <header class="logo-header">
+    <img src="assets/images/logo-header.png" alt="MedAI" />
+  </header>
+
+  <header class="page-header">
+    <button type="button" class="page-header__icon-btn" id="menu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="nav-drawer" aria-label="פתיחת תפריט">
+      <img src="assets/icons/icon-menu.png" alt="" />
+    </button>
+    <div class="page-header__title-group">
+      <p class="page-header__title page-header__title--lg">שלום יעל</p>
+      <p class="page-header__subtitle">הנה מה שצריך לקחת עכשיו</p>
+    </div>
+    <button type="button" class="page-header__icon-btn page-header__icon-btn--trailing" aria-label="התראות">
+      <img src="assets/icons/icon-bell.png" alt="" />
+      <span class="page-header__badge" aria-hidden="true"></span>
+    </button>
+  </header>
+
+  <main class="content">
+
+    <section class="hero-card" aria-label="התרופה הבאה">
+      <p class="hero-card__kicker">התרופה הבאה</p>
+      <div class="hero-card__time-row">
+        <p class="hero-card__time">10:00</p>
+        <img class="hero-card__pill-img" src="assets/images/lisinopril-10mg.png" alt="ליסינופריל 10 מ״ג" />
+      </div>
+      <p class="hero-card__name">ליסינופריל 10 מ״ג</p>
+      <p class="hero-card__caption">טבליה 1 · אחרי אוכל</p>
+    </section>
+
+    <div class="action-buttons">
+      <button type="button" class="btn btn--success">
+        <img src="assets/icons/icon-check.png" alt="" />
+        סימון כנלקח
+      </button>
+      <button type="button" class="btn btn--outline">
+        <img src="assets/icons/icon-clock.png" alt="" />
+        דחייה / תזכורת מאוחר יותר
+      </button>
+    </div>
+
+    <h2 class="section-title">התרופות שלי היום</h2>
+
+    <div class="mini-cards">
+      <article class="mini-card">
+        <div class="mini-card__text">
+          <p class="mini-card__time">14:00</p>
+          <p class="mini-card__name">מטפורמין 500 מ״ג</p>
+        </div>
+        <img class="mini-card__img" src="assets/images/metformin-500mg.png" alt="מטפורמין" />
+      </article>
+      <article class="mini-card">
+        <div class="mini-card__text">
+          <p class="mini-card__time">20:00</p>
+          <p class="mini-card__name">וורפין 5 מ״ג</p>
+        </div>
+        <img class="mini-card__img" src="assets/images/warfarin-5mg.png" alt="וורפין" />
+      </article>
+      <article class="mini-card">
+        <div class="mini-card__text">
+          <p class="mini-card__time">22:00</p>
+          <p class="mini-card__name">ויטמין D 1000 IU</p>
+        </div>
+        <img class="mini-card__img" src="assets/images/vitamin-d-1000iu.png" alt="ויטמין D" />
+      </article>
+    </div>
+
+    <div class="slider" role="tablist" aria-label="דפדוף תרופות">
+      <span class="slider__dot" aria-hidden="true"></span>
+      <span class="slider__dot slider__dot--active" aria-hidden="true"></span>
+      <span class="slider__dot" aria-hidden="true"></span>
+      <span class="slider__dot" aria-hidden="true"></span>
+      <span class="slider__dot" aria-hidden="true"></span>
+    </div>
+
+  </main>
+
+  <nav class="bottom-nav" aria-label="ניווט ראשי">
+    <a class="nav-item nav-item--active" href="index.html" aria-current="page">
+      <span class="nav-item__icon-wrap"><img src="assets/icons/nav-home.png" alt="" /></span>
+      <span class="nav-item__label">בית</span>
+    </a>
+    <a class="nav-item" href="#">
+      <span class="nav-item__icon-wrap"><img src="assets/icons/nav-calendar.png" alt="" /></span>
+      <span class="nav-item__label">יומן</span>
+    </a>
+    <a class="nav-item" href="#">
+      <span class="nav-item__icon-wrap"><img src="assets/icons/nav-medications.png" alt="" /></span>
+      <span class="nav-item__label">תרופות</span>
+    </a>
+    <a class="nav-item" href="status.html">
+      <span class="nav-item__icon-wrap"><img src="assets/icons/nav-caregiver.png" alt="" /></span>
+      <span class="nav-item__label">מלווה</span>
+    </a>
+    <a class="nav-item" href="#">
+      <span class="nav-item__icon-wrap"><img src="assets/icons/nav-profile.png" alt="" /></span>
+      <span class="nav-item__label">פרופיל</span>
+    </a>
+  </nav>
+
+  <div class="drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+  <nav class="drawer" id="nav-drawer" aria-label="ניווט בין מסכים" aria-hidden="true">
+    <div class="drawer__head">
+      <button type="button" class="drawer__close" id="drawer-close" aria-label="סגירת תפריט">✕</button>
+      <p class="drawer__title">מסכי האפליקציה</p>
+    </div>
+    <div class="drawer__nav">
+      <a class="drawer__link is-current" href="index.html" aria-current="page">מסך הבית — התרופה הבאה עכשיו</a>
+      <a class="drawer__link" href="onboarding.html">הזנת תרופה ראשונה</a>
+      <a class="drawer__link" href="status.html">סטטוס המטופל היום — מלווה</a>
+    </div>
+  </nav>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
