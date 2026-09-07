@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MedAI — אישור נטילה</title>
+<meta name="description" content="MedAI — אישור שהתרופה נלקחה בהצלחה" />
+<link rel="icon" type="image/png" href="assets/images/logo-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="screen">
+
+  <div class="status-bar" aria-hidden="true">
+    <span class="status-bar__time">9:41</span>
+    <span class="status-bar__icons">••••  📶  🔋</span>
+  </div>
+
+  <header class="logo-header">
+    <img src="assets/images/logo-header.png" alt="MedAI" />
+  </header>
+
+  <header class="page-header page-header--onboarding">
+    <a class="page-header__icon-btn" href="home.html" aria-label="חזרה למסך הראשי">
+      <img src="assets/icons/icon-back.png" alt="" />
+    </a>
+    <div class="page-header__title-group">
+      <p class="page-header__title">אישור נטילה</p>
+    </div>
+  </header>
+
+  <main class="content">
+
+    <div class="result">
+      <img class="result__icon" src="assets/icons/icon-check.png" alt="" />
+      <h1 class="result__title result__title--success">סימון הצליח!</h1>
+      <p class="result__meta" id="dose-confirm-name">ליסינופריל 10 מ״ג</p>
+      <p class="result__time" id="dose-confirm-time">10:00</p>
+    </div>
+
+    <div class="info-card">
+      <img src="assets/icons/icon-shield-check.png" alt="" />
+      <p>התרופה נשמרה במעקב האישי שלך</p>
+    </div>
+
+  </main>
+
+  <div class="btn-footer">
+    <a class="btn btn--primary" href="home.html">חזרה למסך הראשי</a>
+  </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
