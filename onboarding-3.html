@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MedAI — סקירה ואישור</title>
+<meta name="description" content="MedAI — אשף הזנת תרופה: שלב 3, סקירה ואישור" />
+<link rel="icon" type="image/png" href="assets/images/logo-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="onboarding-3">
+<div class="screen">
+
+  <div class="status-bar" aria-hidden="true">
+    <span class="status-bar__time">9:41</span>
+    <span class="status-bar__icons">••••  📶  🔋</span>
+  </div>
+
+  <header class="logo-header">
+    <img src="assets/images/logo-header.png" alt="MedAI" />
+  </header>
+
+  <header class="page-header page-header--onboarding">
+    <a class="page-header__icon-btn" href="onboarding-2.html" aria-label="חזרה לשלב הקודם">
+      <img src="assets/icons/icon-back.png" alt="" />
+    </a>
+    <div class="page-header__title-group">
+      <p class="page-header__title">סקירה ואישור</p>
+    </div>
+  </header>
+
+  <ol class="stepper" aria-label="שלבי הזנת תרופה">
+    <li class="stepper__step">
+      <span class="stepper__circle">1</span>
+      <span class="stepper__label">פרטי תרופה</span>
+    </li>
+    <li class="stepper__connector" aria-hidden="true"></li>
+    <li class="stepper__step">
+      <span class="stepper__circle">2</span>
+      <span class="stepper__label">זמנים ומינון</span>
+    </li>
+    <li class="stepper__connector" aria-hidden="true"></li>
+    <li class="stepper__step stepper__step--active">
+      <span class="stepper__circle" aria-current="step">3</span>
+      <span class="stepper__label">סקירה ואישור</span>
+    </li>
+  </ol>
+
+  <div class="form">
+
+    <div class="field">
+      <span class="field__label">צילום התרופה</span>
+
+      <button type="button" class="photo-upload" id="photo-upload-btn" aria-pressed="false">
+        <span class="photo-upload__viewfinder" aria-hidden="true">
+          <span class="photo-upload__corner photo-upload__corner--tl"></span>
+          <span class="photo-upload__corner photo-upload__corner--tr"></span>
+          <span class="photo-upload__corner photo-upload__corner--bl"></span>
+          <span class="photo-upload__corner photo-upload__corner--br"></span>
+          <span class="photo-upload__hint">מקם את התרופה בתוך המסגרת</span>
+        </span>
+
+        <img class="photo-upload__preview" id="photo-upload-preview" src="" alt="" />
+
+        <span class="photo-upload__close" aria-hidden="true">✕</span>
+
+        <span class="photo-upload__bar" aria-hidden="true">
+          <span class="photo-upload__thumb-slot">
+            <img class="photo-upload__thumb" id="photo-upload-thumb" src="" alt="" />
+          </span>
+          <span class="photo-upload__shutter"><span class="photo-upload__shutter-ring"></span></span>
+          <span class="photo-upload__thumb-slot photo-upload__thumb-slot--ghost"></span>
+        </span>
+      </button>
+
+      <div class="gallery-modal" id="gallery-strip" aria-label="בחירת תמונת תרופה" hidden>
+        <div class="gallery-modal__head">
+          <p class="gallery-modal__title">בחר מהגלריה</p>
+          <button type="button" class="gallery-modal__close" id="gallery-close-btn" aria-label="סגירה">✕</button>
+        </div>
+        <div class="gallery-modal__grid">
+          <button type="button" class="gallery-strip__item" data-photo="assets/images/pill-generic-white.png" aria-pressed="true">
+            <img src="assets/images/pill-generic-white.png" alt="כדור לבן" />
+          </button>
+          <button type="button" class="gallery-strip__item" data-photo="assets/images/pill-generic-green.png" aria-pressed="false">
+            <img src="assets/images/pill-generic-green.png" alt="כמוסה ירוקה" />
+          </button>
+          <button type="button" class="gallery-strip__item" data-photo="assets/images/pill-generic-pink.png" aria-pressed="false">
+            <img src="assets/images/pill-generic-pink.png" alt="כדור ורוד" />
+          </button>
+          <button type="button" class="gallery-strip__item" data-photo="assets/images/lisinopril-10mg.png" aria-pressed="false">
+            <img src="assets/images/lisinopril-10mg.png" alt="ליסינופריל" />
+          </button>
+          <button type="button" class="gallery-strip__item" data-photo="assets/images/metformin-500mg.png" aria-pressed="false">
+            <img src="assets/images/metformin-500mg.png" alt="מטפורמין" />
+          </button>
+          <button type="button" class="gallery-strip__item" data-photo="assets/images/vitamin-d-1000iu.png" aria-pressed="false">
+            <img src="assets/images/vitamin-d-1000iu.png" alt="ויטמין D" />
+          </button>
+          <button type="button" class="gallery-strip__item" data-photo="assets/images/omeprazole-20mg.png" aria-pressed="false">
+            <img src="assets/images/omeprazole-20mg.png" alt="אומפרזול 20 מ״ג" />
+          </button>
+          <button type="button" class="gallery-strip__item" data-photo="assets/images/levetiracetam-500mg.png" aria-pressed="false">
+            <img src="assets/images/levetiracetam-500mg.png" alt="לבטירצטם 500 מ״ג" />
+          </button>
+          <button type="button" class="gallery-strip__item" data-photo="assets/images/atorvastatin-10mg.png" aria-pressed="false">
+            <img src="assets/images/atorvastatin-10mg.png" alt="אטורבסטטין 10 מ״ג" />
+          </button>
+          <button type="button" class="gallery-strip__item" data-photo="assets/images/b12-1000mcg.png" aria-pressed="false">
+            <img src="assets/images/b12-1000mcg.png" alt="ויטמין B12" />
+          </button>
+          <button type="button" class="gallery-strip__item" data-photo="assets/images/diclofenac-cr-75mg.png" aria-pressed="false">
+            <img src="assets/images/diclofenac-cr-75mg.png" alt="דיקלופנק CR 75 מ״ג" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-card__head">
+        <img id="review-photo" src="assets/images/pill-generic-white.png" alt="" />
+        <p class="review-card__name" id="review-name">התרופה החדשה</p>
+      </div>
+      <div class="review-row">
+        <span class="review-row__label">שעה:</span>
+        <span class="review-row__value" id="review-time">10:00</span>
+      </div>
+      <div class="review-row">
+        <span class="review-row__label">תדירות:</span>
+        <span class="review-row__value" id="review-frequency">כל יום</span>
+      </div>
+      <div class="review-row">
+        <span class="review-row__label">מינון:</span>
+        <span class="review-row__value" id="review-dosage">10 מ״ג</span>
+      </div>
+      <div class="review-row">
+        <span class="review-row__label">תנאי נטילה:</span>
+        <span class="review-row__value" id="review-food-timing">אחרי אוכל</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="btn-footer">
+    <button type="button" class="btn btn--success is-confirmed" id="save-med-btn" data-next="interaction-check.html">
+      <img src="assets/icons/icon-check.png" alt="" />
+      אישור ושמירה
+    </button>
+  </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
